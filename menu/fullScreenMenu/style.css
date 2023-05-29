@@ -59,5 +59,6 @@ ul li a{
 
 .show-menu{
   display: block;
+  opacity: 1;
 }
 

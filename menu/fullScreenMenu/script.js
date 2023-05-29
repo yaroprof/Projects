@@ -1,13 +1,12 @@
 function openFullscreenMenu() {
   var fullscreenMenu = document.getElementById("fullscreen-menu");
-  fullscreenMenu.classList.add("show-menu");
+  fullscreenMenu.style.display = "block";
 }
 
 function closeFullscreenMenu() {
   var fullscreenMenu = document.getElementById("fullscreen-menu");
-  fullscreenMenu.classList.remove("show-menu");
+  fullscreenMenu.style.display = "none";
 }
-
 
 
 
