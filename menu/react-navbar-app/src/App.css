@@ -1,6 +1,68 @@
-* {
+/* Default Common CSS Styles */
+
+/* Reset default styles */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Set box-sizing to border-box for all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Set a default font family and font size */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Add some spacing between elements */
+body,
+button,
+input,
+select,
+textarea {
+  margin-bottom: 10px;
+}
+
+/* Basic styling for buttons */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Basic styling for links */
+a {
+  /* color: #fff; */
+  /* text-decoration: none; */
+}
+
+a:hover {
+  /* text-decoration: underline; */
+  color: #0056b3;
+}
+
+ul li{
+  /* text-decoration: none; */
+  list-style: none;
+
+}
+
