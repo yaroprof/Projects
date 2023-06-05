@@ -1,0 +1,252 @@
+/* Default Common CSS Styles */
+
+/* Reset default styles */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set box-sizing to border-box for all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Set a default font family and font size */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #5a1f06;
+}
+
+/* Add some spacing between elements */
+body,
+button,
+input,
+select,
+textarea {
+  margin-bottom: 10px;
+}
+
+/* Basic styling for buttons */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Basic styling for links */
+a {
+  /* color: #fff; */
+  text-decoration: none;
+}
+
+a:hover {
+  /* text-decoration: underline; */
+  color: #0056b3;
+}
+
+ul li{
+  /* text-decoration: none; */
+  list-style: none;
+
+}
+
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+
+.header {
+  background-color: #FFF;
+  padding: 20px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #F0F0F0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  height: 40px;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.header-nav li {
+  margin-right: 20px;
+}
+
+.header-icons img {
+  height: 20px;
+  margin-left: 10px;
+}
+
+
+/* Hero Styles */
+.hero {
+  background-image: url('hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #FFF;
+  padding: 100px 0;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+/* Hero Slider */
+.slider-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slider-slide {
+  flex: 0 0 100%;
+}
+
+.slider-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.slider-thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.slider-thumbnail {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.slider-thumbnail img {
+  width: 100px;
+  height: 50px;
+}
+
+
+/* 
+.slider-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.slider-pagination button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #888;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slider-pagination button.active {
+  background-color: #FFF;
+} */
+
+
+/* Hero Description */
+.description-container {
+  flex: 1;
+  padding-left: 50px;
+  color: #5a1f06;
+}
+
+.description-container h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.description-container p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #FF6F00;
+  color: #FFF;
+  font-size: 18px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #FF8F00;
+}
+
+/* Slider controls */
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.arrow {
+  font-size: 36px;
+  color: #c52525;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.arrow:hover {
+  opacity: 0.7;
+}
+
+.arrow-left {
+  position: absolute;
+  left: -50px;
+}
+
+.arrow-right {
+  position: absolute;
+  right: -50px;
+}
