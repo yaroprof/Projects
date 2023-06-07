@@ -1,88 +1,58 @@
-// const sliderWrapper = document.querySelector('.slider-wrapper');
-// const sliderSlides = document.querySelectorAll('.slider-slide');
-
-// const slideWidth = sliderSlides[0].offsetWidth;
-
+// Отримуємо необхідні елементи DOM
 const sliderWrapper = document.querySelector('.slider-wrapper');
-const sliderSlides = document.querySelectorAll('.slider-slide');
-const sliderThumbnails = document.querySelectorAll('.slider-thumbnail');
-const arrowLeft = document.querySelector('.arrow-left');
-const arrowRight = document.querySelector('.arrow-right');
+const slides = document.querySelectorAll('.slider-slide');
+const thumbnails = document.querySelectorAll('.slider-thumbnail');
+const prevArrow = document.querySelector('.arrow-left');
+const nextArrow = document.querySelector('.arrow-right');
 
+// Ініціалізуємо поточний слайд
 let currentSlide = 0;
 
-function goToSlide(index) {
-  currentSlide = index;
-  const translateX = -index * slideWidth;
-  sliderWrapper.style.transform = `translateX(${translateX}px)`;
-}
-
-function activateThumbnail(index) {
-  sliderThumbnails.forEach((thumbnail, i) => {
-    if (i === index) {
-      thumbnail.classList.add('active');
-    } else {
-      thumbnail.classList.remove('active');
-    }
-  });
-}
-
-function slideLeft() {
-  if (currentSlide > 0) {
-    goToSlide(currentSlide - 1);
-    activateThumbnail(currentSlide - 1);
+// Додаємо обробник події для лівої стрілки
+prevArrow.addEventListener('click', () => {
+  currentSlide--;
+  if (currentSlide < 0) {
+    currentSlide = slides.length - 1;
   }
-}
+  updateSlider();
+});
 
-function slideRight() {
-  if (currentSlide < sliderSlides.length - 1) {
-    goToSlide(currentSlide + 1);
-    activateThumbnail(currentSlide + 1);
+// Додаємо обробник події для правої стрілки
+nextArrow.addEventListener('click', () => {
+  currentSlide++;
+  if (currentSlide === slides.length) {
+    currentSlide = 0;
   }
-}
+  updateSlider();
+});
 
-arrowLeft.addEventListener('click', slideLeft);
-arrowRight.addEventListener('click', slideRight);
-
-sliderThumbnails.forEach((thumbnail, index) => {
+// Додаємо обробник події для мініатюр
+thumbnails.forEach((thumbnail, index) => {
   thumbnail.addEventListener('click', () => {
-    goToSlide(index);
-    activateThumbnail(index);
+    currentSlide = index;
+    updateSlider();
   });
 });
 
-// Initialize the first slide and active thumbnail
-goToSlide(0);
-activateThumbnail(0);
+// Функція для оновлення слайдера
+function updateSlider() {
+  // Видаляємо клас "active" у всіх слайдів та мініатюр
+  slides.forEach((slide) => {
+    slide.classList.remove('active');
+  });
+  thumbnails.forEach((thumbnail) => {
+    thumbnail.classList.remove('active');
+  });
 
+  // Додаємо клас "active" до поточного слайда та мініатюри
+  slides[currentSlide].classList.add('active');
+  thumbnails[currentSlide].classList.add('active');
+  
+  // Зміщуємо слайдер за допомогою стилів CSS
+  const slideWidth = slides[currentSlide].offsetWidth;
+  const translateX = -slideWidth * currentSlide;
+  sliderWrapper.style.transform = `translateX(${translateX}px)`;
+}
 
-
-// v01
-
-// function goToSlide(index) {
-//   const translateX = -index * slideWidth;
-//   sliderWrapper.style.transform = `translateX(${translateX}px)`;
-// }
-
-// function activateThumbnail(index) {
-//   const sliderThumbnails = document.querySelectorAll('.slider-thumbnail');
-//   sliderThumbnails.forEach((thumbnail, i) => {
-//     if (i === index) {
-//       thumbnail.classList.add('active');
-//     } else {
-//       thumbnail.classList.remove('active');
-//     }
-//   });
-// }
-
-// const sliderThumbnails = document.querySelectorAll('.slider-thumbnail');
-// sliderThumbnails.forEach((thumbnail, index) => {
-//   thumbnail.addEventListener('click', () => {
-//     goToSlide(index);
-//     activateThumbnail(index);
-//   });
-// });
-
-// // Initialize the first slide and active thumbnail
-// goToSlide(0);
-// activateThumbnail(0);
+// Ініціалізуємо слайдер
+updateSlider();

@@ -1,0 +1,87 @@
+
+
+/* Header Styles */
+.header {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.header {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  /* background-color: #f0f0f0; */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo a {
+  text-decoration: none;
+  color: #000;
+  font-size: 24px;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: 45px;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.nav-item a svg {
+  width: 20px;
+  height: 20px;
+  margin: 15px 40px;
+}
+
+.nav-item a span {
+  vertical-align: middle;
+}
+
+.header-icons img {
+  height: 20px;
+  margin-left: 10px;
+}
+
+.header-utility-ctas {
+  display: flex;
+  align-items: center;
+  /* background: #000; */
+}
+
+.utility-cta {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background: red;
+}
+
+.utility-icon {
+  width: 24px;
+  height: 24px;
+  fill: #000;
+  margin-right: 5px;
+}

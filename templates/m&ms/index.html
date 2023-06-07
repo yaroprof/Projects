@@ -6,17 +6,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>M&Ms</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
     <!-- Header -->
-    <header>
+
+    <header class="header">
+      <div class="header-container">
+        <div class="header-left">
+          <div class="header-logo">
+            <a href="#">Logo</a>
+          </div>
+          <nav class="header-nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-home"
+                  >
+                    <path d="M3 9l9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                  </svg>
+                  <span>Shop</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-gift"
+                  >
+                    <polyline points="20 12 20 22 4 22 4 12" />
+                    <rect x="2" y="7" width="20" height="5" />
+                    <line x1="12" y1="22" x2="12" y2="7" />
+                    <path d="M7 10a3 3 0 0 1 6 0v2a3 3 0 0 1-6 0z" />
+                  </svg>
+                  <span>Celebrate</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-compass"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <polygon points="16.24 8.24 14.12 14.12 8.24 16.24 10.36 10.36 16.24 8.24" />
+                  </svg>
+                  <span>Explore</span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-briefcase"
+                  >
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                    <path d="M16 3.01l-4-2.01-4 2.01" />
+                    <path d="M2 13h20" />
+                  </svg>
+                  <span>Business</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- utility-ctas -->
+
+        <div class="header-utility-ctas">
+          <a href="#" class="utility-cta">
+            <img src="./images/icons/search-icon.svg" alt="">
+           
+          </a>
+
+          <a href="#" class="utility-cta">
+            <svg class="utility-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <!-- Add SVG path for the second icon -->
+            </svg>
+          </a>
+          <a href="#" class="utility-cta">
+            <svg class="utility-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <!-- Add SVG path for the third icon -->
+            </svg>
+          </a>
+          <a href="#" class="utility-cta">
+            <svg class="utility-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <!-- Add SVG path for the fourth icon -->
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- <header>
       <div class="header-container">
         <div class="header-left">
           <div class="header-logo" src="logo.png"><a href="#">Logo</a></div>
 
           <nav class="header-nav">
             <ul class="nav-list">
-              <li class="nav-item"><a href="#">shop</a></li>
+              <li class="nav-item">
+                <span>
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="css-11omhyd"><g class="css-oro983"><path d="M32.94 11.89A1 1 0 0 0 32 11h-4V9a7 7 0 0 0-7-7h-1a7 7 0 0 0-7 7v2H8.5a1 1 0 0 0-1 .91l-2.53 27a1 1 0 0 0 .6 1 1 1 0 0 0 .4.09h29a1 1 0 0 0 .75-.33 1 1 0 0 0 .24-.78l-3.02-27ZM7.1 38l2.35-25h21.6l2.83 25H7.1ZM15 9a5 5 0 0 1 5-5h1a5 5 0 0 1 5 5v2H15V9Z"></path><path d="M29 25.5a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0Z" mask="url(#l1shopline)"></path><defs><mask id="l1shopline"><path d="M29 25.5a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0Z" fill="#fff"></path><path d="M24.59 27.42v-4a.74.74 0 0 0 0-.21c-.08-.73-.71-1.21-1.86-1.21a3 3 0 0 0-1.61.48A1.65 1.65 0 0 0 19.8 22a3 3 0 0 0-1.62.45v-.35H16v1.12a.45.45 0 0 1 .5.4v3.83a.45.45 0 0 1-.39.5H16V29h2.71v-1c-.27 0-.41-.19-.41-.5V24c0-.37.28-.54.67-.54s.68.16.68.54v5h2.21v-1c-.27 0-.41-.19-.41-.5V24c0-.39.3-.54.68-.54.38 0 .67.16.67.54v5H25v-1c-.31 0-.42-.27-.41-.58Z" fill="#000"></path></mask></defs></g><g class="css-bvxv3d"><path d="M28 13H13V9a7 7 0 0 1 7-7h1a7 7 0 0 1 7 7v4Zm-13-2h11V9a5 5 0 0 0-5-5h-1a5 5 0 0 0-5 5v2Z" fill="#5A1F06"></path><path d="M8.5 12 6 39h29l-3-27H8.5Z" fill="#FFD200"></path><path d="M35 40H6a1 1 0 0 1-.95-.68A1 1 0 0 1 5 38.9l2.55-27a1 1 0 0 1 .95-.9h23.45a1 1 0 0 1 1 .89l3.05 27a1 1 0 0 1-.24.78A1 1 0 0 1 35 40ZM7.1 38h26.78l-2.83-25H9.5L7.1 38Z" fill="#FFD200"></path><path d="M20.5 34a8.5 8.5 0 1 0 0-17 8.5 8.5 0 0 0 0 17Z" fill="#D70100"></path><path d="M24.59 27.42v-4a1 1 0 0 0 0-.21c-.09-.69-.72-1.21-1.87-1.21a3 3 0 0 0-1.61.48A1.65 1.65 0 0 0 19.8 22a3 3 0 0 0-1.62.45v-.35H16v1.12a.45.45 0 0 1 .5.48v3.75a.45.45 0 0 1-.5.5V29h2.71v-1c-.27 0-.41-.19-.41-.5V24c0-.37.28-.54.67-.54s.68.16.68.54v5h2.21v-1c-.27 0-.41-.19-.41-.5V24c0-.39.3-.54.68-.54.38 0 .67.16.67.54v5H25v-1c-.31 0-.42-.27-.41-.58Z" fill="#fff"></path></g></svg>
+                </span>
+                <a href="#">shop</a>
+              </li>
               <li class="nav-item"><a href="#">selebrate</a></li>
               <li class="nav-item"><a href="#">explore</a></li>
               <li class="nav-item active"><a href="#">business</a></li>
@@ -29,7 +151,7 @@
           <a href="#"><img src="cart-icon.png" alt="Cart icon" /></a>
         </div>
       </div>
-    </header>
+    </header> -->
 
     <!-- Hero Section -->
     <section class="hero">
@@ -65,7 +187,6 @@
             <div class="arrow arrow-left">&#10094;</div>
             <div class="arrow arrow-right">&#10095;</div>
           </div>
-
         </div>
         <div class="description-container">
           <h1>Wedding Cake Party Favors</h1>
@@ -96,6 +217,6 @@
     <!-- Footer -->
 
     <!-- Scripts -->
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
   </body>
 </html>
