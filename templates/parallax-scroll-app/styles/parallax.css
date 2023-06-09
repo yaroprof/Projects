@@ -1,0 +1,43 @@
+body, html {
+  height: 100%;
+}
+
+.parallax {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    
+  background-image: url('../img/img01.jpg');
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax h1{
+  height: auto;
+  background-color: aliceblue;
+  padding: 30px;
+}
+
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  height:50vh;
+  background-color:rgb(148, 143, 143);
+  font-size:36px;
+  padding: 25px;
+}
+
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
