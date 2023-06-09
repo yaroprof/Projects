@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Split-Screen Layout with Sticky Navigation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      display: flex;
+    }
+    
+    .left-section,
+    .right-section {
+      width: 50%;
+      height: 100vh;
+      overflow: auto;
+    }
+    
+    .left-section {
+      background-color: #f1f1f1;
+    }
+    
+    .right-section {
+      background-color: #ffffff;
+    }
+    
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .sticky a {
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #333333;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="sticky">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div class="container">
+    <div class="left-section">
+      <!-- Content for the left section -->
+      <h2>Left Section</h2>
+      <p>This is the content for the left section of the split-screen layout.</p>
+    </div>
+
+    <div class="right-section">
+      <!-- Content for the right section -->
+      <h2>Right Section</h2>
+      <p>This is the content for the right section of the split-screen layout.</p>
+    </div>
+  </div>
+</body>
+</html>

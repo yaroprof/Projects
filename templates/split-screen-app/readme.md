@@ -1,0 +1,2 @@
+ web page with a split-screen layout. Divide the page into two equal sections, each displaying different content or features. Use appropriate visual elements to indicate the division and maintain a balanced design."
+"Design a web page with a sticky navigation bar. The navigation bar should stick to the top of the screen as the user scrolls, providing easy access to important links and improving the overall user experience."

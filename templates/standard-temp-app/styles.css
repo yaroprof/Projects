@@ -1,0 +1,176 @@
+/* CSS Reset */
+body, h1, h2, h3, p, ul, li, form, input, textarea, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Hero Section Styles */
+.hero {
+  background-image: url('hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Featured Section Styles */
+.featured {
+  background-color: #f4f4f4;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.featured h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Services Section Styles */
+.services {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.service {
+  margin-bottom: 20px;
+}
+
+.service h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Testimonials Section Styles */
+.testimonials {
+  background-color: #f4f4f4;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.testimonial {
+  margin-bottom: 20px;
+}
+
+.testimonial p {
+  font-style: italic;
+}
+
+.testimonial cite {
+  font-weight: bold;
+}
+
+/* Contact Section Styles */
+.contact {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.contact input,
+.contact textarea,
+.contact button {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+.contact button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* CSS code for responsive burger menu */
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #f1ebeb;
+  margin: 4px;
+}
+
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu.show {
+    display: block;
+  }
+
+  .nav-menu li {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
