@@ -1,0 +1,1 @@
+web page with a parallax scrolling effect. Implement a background image that scrolls at a different speed than the rest of the content, creating a visually engaging and dynamic experience as the user scrolls." 
