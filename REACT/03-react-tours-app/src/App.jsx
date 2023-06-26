@@ -1,27 +1,31 @@
 import React, { useState, useEffect } from 'react'
 import Tours from './Tours';
-import { getPlacesData } from './api';
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
 
-function App() {
-  const [places, setPlaces] = useState([])
-  // const [tours, setTours] = useState([])
+const url = 'https://course-api.com/react-tours-project';
 
+
+const App = () => {
+  const [tours, setTours] = useState([])
+
+  const fetchTours = async () => {
+    try {
+      const response = await fetch(url)
+      const tours = await response.json()
+      setTours(tours)
+      
+      console.log(tours);
+    } catch (error) {
+      console.log(error);
+    }
+  }
   useEffect(() => {
-    getPlacesData()
-      .then((data) => {
-        console.log(data);
-        
-        setPlaces(data)
-    })
+    fetchTours()
   }, [])
 
 
   return (
     <main>
-      <Tours />
+      <Tours tours={tours} />
     </main>
   )
 }
