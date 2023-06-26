@@ -1,9 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-const Tour = () => {
+const Tour = ({ id, name, info, image, price, removeTour }) => {
+  const [readMore, setReadMore] = useState(false);
+
   return (
-    <div>Tour</div>
-  )
-}
+    <article className="mb-8 bg-white rounded-lg shadow-md transition duration-300 flex flex-col items-center">
+      <img src={image} alt={name} />
+      <footer className="pt-4 p-8">
+        <div className="flex items-center mt-8 mb-8 justify-between">
+          <h4 className="text-lg font-bold">{name}</h4>
+          <h4 className="text-lg font-bold bg-blue-500 text-white px-2 py-0.5 rounded">{price}</h4>
+        </div>
 
-export default Tour
+        <p className="mb-2 mb-5 text-blue-500 text-blue-900 px-6">
+          {readMore ? info : `${info.substring(0, 200)}...`}
+          <button
+            className="inline-block bg-transparent border-transparent capitalize text-primary-500 text-lg font-normal cursor-pointer pl-1 ml-2 px-6"
+            onClick={() => setReadMore(!readMore)}>
+            {readMore ? 'show less' : ' read more'}
+          </button>
+        </p>
+
+        <button
+          className="block w-48 mx-auto mt-4 text-red-700 text-lg font-semibold bg-transparent border-2 border-red-700 py-1 px-2 rounded"
+          onClick={() => removeTour(id)}>
+          not interested
+        </button>
+      </footer>
+    </article>
+  );
+};
+
+export default Tour;

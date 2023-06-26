@@ -7,6 +7,12 @@ const url = 'https://course-api.com/react-tours-project';
 const App = () => {
   const [tours, setTours] = useState([])
 
+
+  const removeTour = (id) => {
+    const newTours = tours.filter((tour) => tour.id !== id)
+    setTours(newTours)
+  }
+
   const fetchTours = async () => {
     try {
       const response = await fetch(url)
@@ -24,8 +30,8 @@ const App = () => {
 
 
   return (
-    <main>
-      <Tours tours={tours} />
+    <main className='max-w-3xl max-w-fixed-width mx-auto mt-20 sm:px-4 md:px-8'>
+      <Tours tours={tours} removeTour={removeTour} />
     </main>
   )
 }
