@@ -6,7 +6,7 @@ const Tour = ({ id, name, info, image, price, removeTour, updateTours }) => {
   return (
 
 
-    <article className="mb-8 bg-white rounded-lg shadow-md transition duration-300 flex flex-col items-center">
+    <article className="mb-8 mt-8 pt-8 bg-white rounded-lg shadow-md transition duration-300 flex flex-col items-center">
       {/* Image hero */}
       <img src={image} alt={name} className="h-40 sm:h-48 object-cover" />
 

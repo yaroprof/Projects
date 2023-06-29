@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import UpdateToursButton from './components/Update';
 import Tours from './components/Tours';
+import Sidebar from './components/Sidebar';
 
 const url = 'https://course-api.com/react-tours-project';
 
@@ -41,9 +42,12 @@ const App = () => {
   };
 
   return (
-    <main className="max-w-3xl max-w-fixed-width mx-auto mt-20 sm:px-4 md:px-8">
-      <UpdateToursButton  updateTours={updateTours} />
-      <Tours tours={tours} removeTour={removeTour} />
+    <main className="flex max-w-fixed-width ">
+      <Sidebar updateTours={updateTours} />
+      <div className="flex-grow">
+        <Tours tours={tours} removeTour={removeTour} />
+      </div>
+
     </main>
   );
 };
