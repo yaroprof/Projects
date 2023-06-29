@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 
-const Tour = ({ id, name, info, image, price, removeTour }) => {
+const Tour = ({ id, name, info, image, price, removeTour, updateTours }) => {
   const [readMore, setReadMore] = useState(false);
 
   return (
+
+
     <article className="mb-8 bg-white rounded-lg shadow-md transition duration-300 flex flex-col items-center">
-      <img src={image} alt={name} />
+      {/* Image hero */}
+      <img src={image} alt={name} className="h-40 sm:h-48 object-cover" />
+
+      {/* Text description- footer */}
       <footer className="pt-4 p-8">
         <div className="flex items-center mt-8 mb-8 justify-between">
           <h4 className="text-lg font-bold">{name}</h4>
@@ -21,6 +26,7 @@ const Tour = ({ id, name, info, image, price, removeTour }) => {
           </button>
         </p>
 
+        {/* Remove button */}
         <button
           className="block w-48 mx-auto mt-4 text-red-700 text-lg font-semibold bg-transparent border-2 border-red-700 py-1 px-2 rounded"
           onClick={() => removeTour(id)}>
@@ -28,6 +34,10 @@ const Tour = ({ id, name, info, image, price, removeTour }) => {
         </button>
       </footer>
     </article>
+
+
+
+
   );
 };
 

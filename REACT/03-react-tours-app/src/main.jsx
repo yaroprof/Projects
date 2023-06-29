@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import '../dist/output.css';
-import './media.css';
-import './base.css';
+import './styles/media.css';
+import './styles/base.css';
 
 // import './index.css'
 
